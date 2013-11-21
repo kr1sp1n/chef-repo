@@ -8,7 +8,7 @@
 #
 
 user_id = node[:devenv][:user]
-theme = node[:devenv][:ohmyzsh][:theme] || 'superjarin'
+theme = node[:devenv][:ohmyzsh][:theme]
 
 git "/home/#{user_id}/.oh-my-zsh" do
   repository "https://github.com/robbyrussell/oh-my-zsh.git"
