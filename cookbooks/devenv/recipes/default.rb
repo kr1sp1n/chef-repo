@@ -31,3 +31,10 @@ execute "change shell" do
   command "chsh #{user_id} -s $(which zsh)"
   action :run
 end
+
+cookbook_file "/home/#{user_id}/.tmux.conf" do
+  source   '.tmux.conf'
+  owner user_id
+  group user_id
+  action   :create
+end
