@@ -38,3 +38,10 @@ cookbook_file "/home/#{user_id}/.tmux.conf" do
   group user_id
   action   :create
 end
+
+cookbook_file "/home/#{user_id}/.vimrc" do
+  source   '.vimrc'
+  owner user_id
+  group user_id
+  action   :create
+end

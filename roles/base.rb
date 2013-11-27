@@ -6,7 +6,8 @@ run_list(
   "recipe[git]",
   "recipe[zsh]",
   "recipe[ntp]",
-  "recipe[tmux]"
+  "recipe[tmux]",
+  "recipe[vim]"
 )
 # Attributes applied if the node doesn't have it set already.
 #default_attributes()
