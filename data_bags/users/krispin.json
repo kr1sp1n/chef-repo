@@ -1,4 +1,5 @@
 {
   "id": "krispin",
-  "groups": [ "sysadmin" ]
+  "groups": [ "sysadmin" ],
+  "ssh_keys": [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcIXRsRRmVw8m5ShxD06D3z0agW9q8IEF7VtlKscOzReBt9/+aHJt8xZaCZ3RHsj73rbDI2Quf/J388+1322X71d7bChY0S5qHBaBQBjlepTh2YZSqphQH3Yp4QikZovjNlllN57a+ZK59LIUHAjwF792vdOHh7LKDtl6kFDOdu2qobSfxiIZPynTWLDKvv+oesuOqjUoSXoNgqVl5q21dsE6Jx6zKsPLtKoPv/dNdtWu986iaygrcDaCzeGAcpd8n5eOPPfIoFQT9BZQw1DU4o8u336+kaVO4NMaleaa8ER4fhFagjAIS0awe0QDYA3b+zWDwPPZRisQGuGathlN9 krispin.schulz" ]
 }
