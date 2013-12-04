@@ -32,7 +32,7 @@ log "Active groups: #{active_groups.join(', ')}" do
 end
 
 groups_q = active_groups.map{|g| "groups:#{g}"}.join(' OR ')
-active_users = GenericUsers::User::search("( #{groups_q} ) AND -shell:false")
+active_users = GenericUsers::User::user_search("( #{groups_q} ) NOT action:remove NOT shell:false")
 
 managed_groups = Hash[
   active_users.
