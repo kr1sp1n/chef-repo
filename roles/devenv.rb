@@ -3,6 +3,7 @@ description "devenv role"
 # List of recipes and roles to apply. Requires Chef 0.8, earlier versions use 'recipes()'.
 run_list(
   "role[base]",
+  "recipe[irssi]",
   "recipe[devenv]"
 )
 # Attributes applied if the node doesn't have it set already.
