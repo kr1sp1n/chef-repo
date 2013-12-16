@@ -1,6 +1,18 @@
 " do not make vim compatible with vi.
 set nocompatible
 
+" vundle config
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+filetype plugin indent on
+
+" original repos on GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'kchmck/vim-coffee-script'
+
 " number the lines.
 set number
 
@@ -18,6 +30,7 @@ set wildmode=list:longest
 
 " turn on syntax hightlighting.
 set syntax=on
+syntax enable
 
 " colorscheme desert
 colorscheme desert

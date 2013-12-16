@@ -39,9 +39,37 @@ cookbook_file "/home/#{user_id}/.tmux.conf" do
   action   :create
 end
 
+bundle_dir = "/home/#{user_id}/.vim/bundle"
+vundle_dir = "/home/#{user_id}/.vim/bundle/vundle"
+
+directory bundle_dir do
+  owner user_id
+  group user_id
+end
+
+directory vundle_dir do
+  owner user_id
+  group user_id
+end
+
+git vundle_dir do
+  repository "https://github.com/gmarik/vundle.git"
+  reference "master"
+  user user_id
+  group user_id
+  action :sync
+end
+
 cookbook_file "/home/#{user_id}/.vimrc" do
   source   '.vimrc'
   owner user_id
   group user_id
   action   :create
+end
+
+execute "install vim Bundles" do
+  command "vim +BundleInstall +qall"
+  user user_id
+  group user_id
+  action :run
 end
