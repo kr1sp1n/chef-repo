@@ -73,10 +73,10 @@ cookbook_file "/home/#{user_id}/.vimrc" do
   action   :create
 end
 
-execute "install vim Bundles" do
-  command "vim +BundleInstall +qall"
-  user user_id
-  group user_id
-  action :run
-end
+#execute "install vim Bundles" do
+#  command "vim +BundleInstall +qall"
+#  user user_id
+#  group user_id
+#  action :run
+#end
 
