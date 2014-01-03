@@ -22,7 +22,10 @@ if platform_family?('windows')
   include_recipe 'ntp::windows_client'
 else
   node['ntp']['packages'].each do |ntppkg|
+    #if platform_family?('suse') and ntppkg == 'ntpdate'
+    #else
     package ntppkg
+    #end
   end
 
   [node['ntp']['varlibdir'], node['ntp']['statsdir']].each do |ntpdir|
