@@ -46,6 +46,7 @@ vundle_dir = "#{bundle_dir}/vundle"
 directory vim_dir do
   owner user_id
   group user_id
+end
 
 directory bundle_dir do
   owner user_id
@@ -78,3 +79,4 @@ execute "install vim Bundles" do
   group user_id
   action :run
 end
+
