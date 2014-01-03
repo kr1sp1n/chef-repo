@@ -39,8 +39,13 @@ cookbook_file "/home/#{user_id}/.tmux.conf" do
   action   :create
 end
 
-bundle_dir = "/home/#{user_id}/.vim/bundle"
-vundle_dir = "/home/#{user_id}/.vim/bundle/vundle"
+vim_dir = "/home/#{user_id}/.vim"
+bundle_dir = "#{vim_dir}/bundle"
+vundle_dir = "#{bundle_dir}/vundle"
+
+directory vim_dir do
+  owner user_id
+  group user_id
 
 directory bundle_dir do
   owner user_id
